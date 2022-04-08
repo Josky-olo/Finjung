@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="bitflyday.com.mobile.application.finjung">
 
     <application
+        android:name=".MainApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -10,15 +12,36 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Finjung">
         <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.Finjung.NoActionBar">
+            android:name=".presentation.LauncherActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Finjung.Launcher">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".presentation.feature.onboarding.OnboardingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.MainActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.samples.apps.iosched.STARTUP_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            android:exported="false"
+            tools:node="merge">
+            <meta-data
+                android:name="bitflyday.com.mobile.application.finjung.utilities.initializers.TimberInitializer"
+                android:value="androidx.startup" />
+        </provider>
     </application>
 
 </manifest>

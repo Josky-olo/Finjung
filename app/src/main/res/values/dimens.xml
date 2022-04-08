@@ -1,3 +1,9 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+
+    <!-- Onboarding -->
+    <dimen name="onboarding_actions_height">112dp</dimen>
+    <dimen name="onboarding_margins">48dp</dimen>
+    <dimen name="onboarding_animation_padding">40dp</dimen>
+    <dimen name="padding_onboarding_button">12dp</dimen>
 </resources>
