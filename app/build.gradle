@@ -54,10 +54,11 @@ dependencies {
 
     implementation("androidx.startup:startup-runtime:1.1.1")
 
+    // UI
+    implementation("com.google.android.material:material:1.5.0")
+
     // Architecture Components
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.5.0-alpha05")
-//    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1")
-//    implementation("androidx.navigation:navigation-fragment-ktx:2.4.2")
 
     // Room
     annotationProcessor  "androidx.room:room-compiler:$rootProject.roomVersion"
