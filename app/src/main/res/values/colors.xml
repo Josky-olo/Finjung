@@ -9,5 +9,8 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="transparent">#0fff</color>
-    <color name="app_bar_them_primary">#07135F</color>
+    <color name="Primary">#0F3B68</color>
+    <color name="Secondary">#eef4fa</color>
+    <color name="Addition">#bccde4</color>
+    <color name="Red">#d72f4e</color>
 </resources>

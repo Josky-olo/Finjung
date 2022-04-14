@@ -56,6 +56,7 @@ dependencies {
 
     // UI
     implementation("com.google.android.material:material:1.5.0")
+    implementation 'com.github.Josky-olo:MotionToast:toast_duration_fix-SNAPSHOT'
 
     // Architecture Components
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.5.0-alpha05")
