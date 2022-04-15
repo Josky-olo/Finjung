@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey
     tableName = "item_categories"
 )
 data class ItemCategories(
-    @PrimaryKey @ColumnInfo(name = "id")
+    @PrimaryKey @ColumnInfo(name = "cate_id")
     val categoryId: String = "unknown",
 
     @ColumnInfo(name = "cate_name")
