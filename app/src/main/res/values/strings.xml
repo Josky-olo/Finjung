@@ -10,5 +10,6 @@
     <string name="hello_first_fragment">Hello Google Play Developer</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_launcher">LauncherActivity</string>
+    <string name="left_over">Left Over\n%1$s</string>
     <!-- TODO: Remove or change this placeholder text -->
 </resources>

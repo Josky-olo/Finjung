@@ -14,8 +14,8 @@
         android:id="@+id/coordinator_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fitsSystemWindows="true"
         android:background="@color/Secondary"
+        android:fitsSystemWindows="true"
         tools:ignore="MergeRootFrame">
 
         <com.google.android.material.appbar.AppBarLayout
@@ -48,13 +48,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="?actionBarSize"
                     app:layout_collapseMode="pin">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Finjung"
                         android:textColor="@color/white"
-                        android:textSize="20sp"/>
+                        android:textSize="20sp" />
                 </androidx.appcompat.widget.Toolbar>
+
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -64,14 +66,16 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
-                        android:layout_marginTop="70dp"
+                        android:layout_marginTop="60dp"
                         android:text="7th January 2022"
-                        android:textColor="#8E8C91"
+                        android:textColor="@color/name"
+                        android:textSize="11sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
+                        android:id="@+id/greeting"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
@@ -81,10 +85,22 @@
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/date_now" />
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:background="@color/transparent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/greeting">
+                        <include android:id="@+id/view_sum_spend"
+                            layout="@layout/view_summary_spend"/>
+                    </FrameLayout>
+
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.appbar.CollapsingToolbarLayout>
         </com.google.android.material.appbar.AppBarLayout>
-
-
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

@@ -10,7 +10,8 @@
 
     <color name="transparent">#0fff</color>
     <color name="Primary">#0F3B68</color>
-    <color name="Secondary">#eef4fa</color>
-    <color name="Addition">#bccde4</color>
+    <color name="Secondary">#e6eefb</color>
+    <color name="Addition">#f9fafe</color>
+    <color name="name">#9AA6AC</color>
     <color name="Red">#d72f4e</color>
 </resources>

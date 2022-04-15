@@ -1,20 +1,21 @@
 package bitflyday.com.mobile.application.finjung.presentation.feature.dashboard
 
+import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.content.res.AppCompatResources
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.updatePadding
 import androidx.fragment.app.viewModels
 import bitflyday.com.mobile.application.finjung.R
 import bitflyday.com.mobile.application.finjung.databinding.FragmentDashboardBinding
 import bitflyday.com.mobile.application.finjung.utilities.showToast
 import www.sanju.motiontoast.MotionToast
 import www.sanju.motiontoast.MotionToastStyle
+import app.futured.donut.DonutSection
+import java.util.*
+import kotlin.collections.ArrayList
 
 
 class DashboardFragment : Fragment() {
@@ -32,6 +33,17 @@ class DashboardFragment : Fragment() {
         setToastColors()
         showToast(MotionToastStyle.ERROR, "Hello world", "How are you.", requireActivity())
         binding.toolbar.navigationIcon = AppCompatResources.getDrawable(requireContext(), R.drawable.ic_clapperboard_svgrepo_com)
+        val donut = binding.viewSumSpend.leftOverDonutView
+        val section1 = DonutSection(
+            name = "section_1",
+            color = resources.getColor(R.color.Red),
+            amount = 3f,
+        )
+        donut.cap = 5f
+        donut.submitData(listOf(section1))
+
+        binding.viewSumSpend.leftOver.text  = resources.getString(R.string.left_over, "฿112,223")
+
         return binding.root
     }
     private fun setToastColors() {

@@ -57,6 +57,9 @@ dependencies {
     // UI
     implementation("com.google.android.material:material:1.5.0")
     implementation 'com.github.Josky-olo:MotionToast:toast_duration_fix-SNAPSHOT'
+    implementation("app.futured.donut:donut:2.2.1")
+
+//    implementation("androidx.cardview:cardview:1.0.0")//?
 
     // Architecture Components
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.5.0-alpha05")
