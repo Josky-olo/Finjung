@@ -1,17 +1,15 @@
 package bitflyday.com.mobile.application.finjung.di
 
 import android.content.Context
-import bitflyday.com.mobile.application.finjung.data.datasource.AccountDao
+import bitflyday.com.mobile.application.finjung.data.datasource.account.AccountDao
 import bitflyday.com.mobile.application.finjung.data.datasource.AppDatabase
-import bitflyday.com.mobile.application.finjung.data.datasource.ItemCategoryDao
-import bitflyday.com.mobile.application.finjung.data.datasource.SpendingItemDao
-import bitflyday.com.mobile.application.finjung.data.prefs.PreferenceStorage
+import bitflyday.com.mobile.application.finjung.data.datasource.dao.ItemCategoryDao
+import bitflyday.com.mobile.application.finjung.data.datasource.dao.SpendingItemDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
-import kotlinx.coroutines.CoroutineScope
 import javax.inject.Singleton
 
 @InstallIn(SingletonComponent::class)

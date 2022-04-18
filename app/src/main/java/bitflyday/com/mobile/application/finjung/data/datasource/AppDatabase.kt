@@ -5,14 +5,14 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
-import bitflyday.com.mobile.application.finjung.data.datasource.entities.Account
+import bitflyday.com.mobile.application.finjung.data.datasource.account.AccountDao
+import bitflyday.com.mobile.application.finjung.data.datasource.dao.ItemCategoryDao
+import bitflyday.com.mobile.application.finjung.data.datasource.dao.SpendingItemDao
+import bitflyday.com.mobile.application.finjung.data.datasource.account.Account
 import bitflyday.com.mobile.application.finjung.data.datasource.entities.ItemCategories
 import bitflyday.com.mobile.application.finjung.data.datasource.entities.Receipt
 import bitflyday.com.mobile.application.finjung.data.datasource.entities.SpendingItem
 import bitflyday.com.mobile.application.finjung.utilities.DATABASE_NAME
-import dagger.Module
-import dagger.hilt.InstallIn
-import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.runBlocking
 
 @Database(entities = [Account::class,Receipt::class,ItemCategories::class,SpendingItem::class], version = 1, exportSchema = false)
@@ -39,7 +39,7 @@ abstract class AppDatabase: RoomDatabase() {
                                 val database = getInstance(context)
                                 runBlocking {
                                     database.accountDao().insertAccount(Account())
-                                    database.itemCategoryDao().insertItemCategories(ItemCategories())
+//                                    database.itemCategoryDao().insertItemCategories(ItemCategories())
                                 }
                             }
                         }

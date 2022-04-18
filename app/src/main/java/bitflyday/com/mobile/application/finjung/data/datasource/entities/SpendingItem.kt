@@ -1,6 +1,7 @@
 package bitflyday.com.mobile.application.finjung.data.datasource.entities
 
 import androidx.room.*
+import bitflyday.com.mobile.application.finjung.data.datasource.account.Account
 
 @Entity(
     tableName = "spending_item",

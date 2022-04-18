@@ -1,4 +1,4 @@
-package bitflyday.com.mobile.application.finjung.data.datasource
+package bitflyday.com.mobile.application.finjung.data.datasource.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
