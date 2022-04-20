@@ -13,11 +13,11 @@ data class Account(
     val accountId: Long = 0,
 
     @ColumnInfo(name = "user_name")
-    val userName: String = "finny",
+    var userName: String = "finny",
 
     @ColumnInfo(name = "first_name")
-    val firstName: String = "Finjung",
+    var firstName: String = "Finjung",
 
     @ColumnInfo(name = "last_name")
-    val lastName: String = "",
+    var lastName: String = "",
 )

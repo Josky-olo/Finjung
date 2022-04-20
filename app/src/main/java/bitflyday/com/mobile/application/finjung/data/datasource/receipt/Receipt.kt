@@ -1,4 +1,4 @@
-package bitflyday.com.mobile.application.finjung.data.datasource.entities
+package bitflyday.com.mobile.application.finjung.data.datasource.receipt
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

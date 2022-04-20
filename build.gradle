@@ -6,6 +6,7 @@ buildscript {
         hiltVersion = '2.39'
         navigationVersion = '2.3.3'
         DataStorePrefsVersion = '1.0.0'
+        gsonVersion = '2.8.6'
     }
     repositories {
         google()

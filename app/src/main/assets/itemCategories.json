@@ -1,0 +1,18 @@
+[
+  {
+    "categoryName": "Salary",
+    "categoryDesc": "a fixed regular payment"
+  },
+  {
+    "categoryName": "Housing",
+    "categoryDesc": "house rent"
+  },
+  {
+    "categoryName": "Clothing",
+    "categoryDesc": "necessary"
+  },
+  {
+    "categoryName": "Insurance",
+    "categoryDesc": "of family"
+  }
+]

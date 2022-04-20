@@ -1,4 +1,4 @@
-package bitflyday.com.mobile.application.finjung.data.datasource.entities
+package bitflyday.com.mobile.application.finjung.data.datasource.category
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
@@ -8,8 +8,9 @@ import androidx.room.PrimaryKey
     tableName = "item_categories"
 )
 data class ItemCategories(
-    @PrimaryKey @ColumnInfo(name = "cate_id")
-    val categoryId: String = "unknown",
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "cate_id")
+    val categoryId: Long,
 
     @ColumnInfo(name = "cate_name")
     val categoryName: String = "unknown",

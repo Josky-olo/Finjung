@@ -10,7 +10,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 
-open class OnboardingCompletedUseCase @Inject constructor(
+class OnboardingCompletedUseCase @Inject constructor(
     private val preferenceStorage: PreferenceStorage,
     @IoDispatcher dispatcher: CoroutineDispatcher
 ): FlowUseCase<Unit, Boolean>(dispatcher) {

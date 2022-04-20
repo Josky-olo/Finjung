@@ -13,9 +13,14 @@ import bitflyday.com.mobile.application.finjung.utilities.showToast
 import www.sanju.motiontoast.MotionToast
 import www.sanju.motiontoast.MotionToastStyle
 import app.futured.donut.DonutSection
+import bitflyday.com.mobile.application.finjung.data.datasource.transaction.TransactionItem
 import bitflyday.com.mobile.application.finjung.presentation.feature.transaction.TransactionAdapter
+import bitflyday.com.mobile.application.finjung.utilities.launchAndRepeatWithViewLifecycle
+import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.launch
 
-
+@AndroidEntryPoint
 class DashboardFragment : Fragment() {
 
     private val dashboardViewModel: DashboardViewModel by viewModels()
@@ -50,17 +55,34 @@ class DashboardFragment : Fragment() {
         showToast(MotionToastStyle.ERROR, "Hello world", "How are you.", requireActivity())
         binding.viewSumSpend.leftOver.text = resources.getString(R.string.left_over, "฿112,223")
 
-        // prepare set UI
+//         prepare set UI
         transactionAdapter = TransactionAdapter(
             viewLifecycleOwner
         )
         binding.recyclerviewTransaction.apply {
             adapter = transactionAdapter
         }
+        launchAndRepeatWithViewLifecycle {
+            launch {
+                dashboardViewModel.account.collect { result ->
+                    val severalGreeting = "Hello"
+                    binding.greeting.text = String.format(resources.getString(R.string.greeting), severalGreeting, result?.userName)
+                }
+            }
+            launch {
+                dashboardViewModel.transactions1.collect { result ->
+                    transactionAdapter.submitList(result)
+                }
+            }
+        }
     }
 
-    private fun updateDashboardUi(dashboardUiData: DashboardUiData) {
-        //1. summary spending
+    private fun tempFunction_updateTransaction(transactionItem: List<TransactionItem>) {
+
+    }
+
+    private fun updateDashboardUi(dashboardUiData: DashboardUiData, transactionItem: List<TransactionItem>) {
+        //1. summary transaction
 
         //2. transaction item
         transactionAdapter.submitList(dashboardUiData.listTransactionItem)

@@ -13,7 +13,10 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import bitflyday.com.mobile.application.finjung.presentation.LaunchNavigationAction.NavigateToOnboardingAction
 import bitflyday.com.mobile.application.finjung.presentation.LaunchNavigationAction.NavigateToMainActivityAction
+import bitflyday.com.mobile.application.finjung.utilities.showToast
+import kotlinx.coroutines.flow.forEach
 import timber.log.Timber
+import www.sanju.motiontoast.MotionToastStyle
 
 
 @AndroidEntryPoint

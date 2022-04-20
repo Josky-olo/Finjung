@@ -10,11 +10,11 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 
-open class LoadAccountsUseCase @Inject constructor(
+class LoadAccountUseCase @Inject constructor(
     private val accountRepository: AccountRepository,
-@IoDispatcher dispatcher: CoroutineDispatcher
-):FlowUseCase<Unit, List<Account>>(dispatcher) {
-    override fun execute(parameters: Unit): Flow<Result<List<Account>>> {
-        return accountRepository.getAccounts().map { Result.Success(it) }
+    @IoDispatcher dispatcher: CoroutineDispatcher
+) : FlowUseCase<Unit, Account>(dispatcher) {
+    override fun execute(parameters: Unit): Flow<Result<Account>> {
+        return accountRepository.getAccount().map { Result.Success(it) }
     }
 }
